@@ -1,0 +1,400 @@
+name_muni,Invertebrado_aquatico,Invertebrado_marinho,Invertebrado_terrestre,Micro-organismo,Planta_aquatica,Planta_terrestre,Vertebrado_aquatico,Vertebrado_terrestre
+Cambará,3,0,3,0,0,1,18,0
+Icaraíma,3,0,4,0,3,10,13,1
+Porto Rico,3,0,3,3,0,4,146,1
+São Jorge Do Patrocínio,3,0,3,0,0,8,12,3
+Alto Paraíso,2,0,1,0,0,2,17,1
+Guaraqueçaba,2,1,14,0,19,61,123,18
+Guaíra,2,0,2,0,0,2,62,3
+Londrina,2,0,19,0,2,31,292,7
+Matelândia,2,0,3,0,2,22,8,7
+Alto Paraná,1,0,3,0,0,1,1,0
+Altônia,1,0,2,0,0,1,36,2
+Cambé,1,0,4,0,0,21,42,2
+Capitão Leônidas Marques,1,1,3,0,0,1,15,1
+Centenário Do Sul,1,0,3,0,0,1,6,0
+Floresta,1,0,3,0,0,0,0,0
+Foz Do Iguaçu,1,0,3,0,2,6,135,7
+Francisco Alves,1,0,3,0,0,1,0,0
+Guaratuba,1,7,3,0,12,25,137,10
+Ibiporã,1,0,3,0,0,2,17,3
+Japurá,1,0,2,0,0,1,0,0
+Jataizinho,1,0,4,0,0,1,97,4
+Lapa,1,0,4,0,0,8,0,9
+Maringá,1,0,5,0,1,8,70,5
+Matinhos,1,4,1,0,1,24,8,17
+Palmital,1,0,1,0,0,0,0,1
+Pinhão,1,0,1,0,1,3,2,3
+Piraquara,1,0,2,0,0,11,1,5
+Primeiro De Maio,1,0,5,0,0,1,12,0
+Quedas Do Iguaçu,1,0,3,0,0,0,19,0
+Querência Do Norte,1,0,3,0,0,0,1,0
+Ribeirão Claro,1,0,3,0,0,1,10,0
+Santa Helena,1,0,11,0,0,2,43,0
+Santa Terezinha De Itaipu,1,0,3,0,1,1,1,0
+Sertaneja,1,0,2,0,0,1,31,0
+Sertanópolis,1,0,2,0,0,1,118,0
+São Mateus Do Sul,1,0,1,0,1,2,2,1
+Telêmaco Borba,1,0,5,0,0,8,15,4
+Ubiratã,1,0,3,0,0,1,0,0
+Paranaguá,0,920,2,495,11,45,59,32
+Antonina,0,172,7,69,15,29,39,5
+Pontal Do Paraná,0,13,4,0,2,5,4,3
+Araucária,0,2,1,0,0,8,1,6
+Curitiba,0,0,24,0,6,372,13,51
+Marechal Cândido Rondon,0,0,22,0,0,1,33,0
+Jaguapitã,0,0,15,0,0,1,6,0
+Itaipulândia,0,0,14,0,0,1,6,0
+Entre Rios Do Oeste,0,0,11,0,0,1,8,0
+Rolândia,0,0,10,0,0,22,80,3
+Toledo,0,0,10,0,0,0,36,2
+Cafeara,0,0,9,0,0,2,0,0
+Castro,0,0,7,0,0,1,8,8
+Miraselva,0,0,7,0,0,1,0,0
+Marialva,0,0,6,0,0,1,7,2
+Mercedes,0,0,6,0,0,0,10,0
+Ponta Grossa,0,0,6,3,5,38,15,21
+Prudentópolis,0,0,6,0,0,1,11,0
+Quatro Pontes,0,0,6,0,0,0,0,0
+São Jerônimo Da Serra,0,0,6,0,0,2,0,0
+Arapongas,0,0,5,0,0,21,19,2
+Arapoti,0,0,5,0,0,5,0,5
+Cianorte,0,0,5,0,0,1,0,0
+Sarandi,0,0,5,0,0,0,1,6
+Candói,0,0,4,0,0,0,17,0
+Colombo,0,0,4,0,1,9,0,1
+Cornélio Procópio,0,0,4,0,0,1,4,3
+Cruzeiro Do Oeste,0,0,4,0,0,1,2,0
+Faxinal,0,0,4,0,0,2,1,0
+Fênix,0,0,4,0,0,3,0,4
+Mauá Da Serra,0,0,4,0,0,1,1,0
+Morretes,0,0,4,0,5,33,27,24
+Tuneiras Do Oeste,0,0,4,0,3,5,15,3
+Adrianópolis,0,0,3,0,2,11,1,3
+Alvorada Do Sul,0,0,3,0,0,1,0,0
+Amaporã,0,0,3,0,0,0,2,1
+Ampére,0,0,3,0,0,0,0,0
+Andirá,0,0,3,0,0,1,94,3
+Araruna,0,0,3,0,0,0,3,0
+Assaí,0,0,3,0,0,2,14,0
+Assis Chateaubriand,0,0,3,0,0,1,0,0
+Astorga,0,0,3,0,0,1,14,0
+Barbosa Ferraz,0,0,3,0,0,2,0,0
+Bela Vista Da Caroba,0,0,3,0,0,0,0,0
+Bela Vista Do Paraíso,0,0,3,0,0,1,0,0
+Boa Vista Da Aparecida,0,0,3,0,0,1,9,0
+Bom Sucesso,0,0,3,0,0,1,0,0
+Bom Sucesso Do Sul,0,0,3,0,0,0,0,0
+Brasilândia Do Sul,0,0,3,0,0,0,12,0
+Califórnia,0,0,3,0,0,1,4,1
+Cambira,0,0,3,0,0,1,6,1
+Campina Grande Do Sul,0,0,3,2,1,6,13,3
+Cantagalo,0,0,3,0,0,3,1,0
+Capanema,0,0,3,0,0,1,8,0
+Carlópolis,0,0,3,0,0,1,0,0
+Corumbataí Do Sul,0,0,3,0,0,1,0,0
+Cruzmaltina,0,0,3,0,0,1,0,0
+Curiúva,0,0,3,0,0,2,6,0
+Cândido De Abreu,0,0,3,0,0,2,1,0
+Diamante Do Norte,0,0,3,0,1,2,34,5
+Dois Vizinhos,0,0,3,0,0,3,0,0
+Doutor Camargo,0,0,3,0,0,1,7,0
+Engenheiro Beltrão,0,0,3,0,0,0,0,0
+Farol,0,0,3,0,0,0,0,0
+Floraí,0,0,3,0,0,1,3,0
+Grandes Rios,0,0,3,0,0,1,1,0
+Guairaçá,0,0,3,0,0,1,0,0
+Guapirama,0,0,3,0,0,1,1,0
+Guarapuava,0,0,3,0,0,68,1,7
+Ibaiti,0,0,3,0,0,2,6,0
+Iguaraçu,0,0,3,0,0,1,3,0
+Iretama,0,0,3,0,0,1,0,0
+Itaguajé,0,0,3,0,0,3,2,0
+Itambaracá,0,0,3,0,0,1,113,0
+Itaúna Do Sul,0,0,3,0,0,1,0,4
+Ivaiporã,0,0,3,0,0,1,2,0
+Ivatuba,0,0,3,0,0,1,0,0
+Jacarezinho,0,0,3,0,0,2,9,0
+Jandaia Do Sul,0,0,3,0,0,1,2,0
+Janiópolis,0,0,3,0,0,1,0,0
+Joaquim Távora,0,0,3,0,0,1,0,0
+Leópolis,0,0,3,0,0,1,2,0
+Lidianópolis,0,0,3,0,0,1,0,0
+Mandaguari,0,0,3,0,0,1,1,1
+Marilena,0,0,3,0,0,0,35,0
+Marilândia Do Sul,0,0,3,0,0,1,4,3
+Marmeleiro,0,0,3,0,0,0,0,0
+Medianeira,0,0,3,0,0,1,6,0
+Mirador,0,0,3,0,0,1,1,0
+Missal,0,0,3,0,0,1,7,0
+Munhoz De Melo,0,0,3,0,0,1,2,0
+Nossa Senhora Das Graças,0,0,3,0,0,3,2,0
+Nova Aliança Do Ivaí,0,0,3,0,0,1,0,0
+Nova Cantu,0,0,3,0,0,0,0,0
+Nova Fátima,0,0,3,0,0,1,16,0
+Nova Londrina,0,0,3,0,0,1,0,0
+Nova Prata Do Iguaçu,0,0,3,0,0,0,26,0
+Nova Tebas,0,0,3,0,0,0,0,0
+Palotina,0,0,3,0,0,2,32,1
+Paranacity,0,0,3,0,0,1,1,0
+Paranapoema,0,0,3,0,0,1,1,0
+Paranavaí,0,0,3,0,0,3,3,0
+Peabiru,0,0,3,0,0,1,13,0
+Perobal,0,0,3,0,0,1,1,0
+Pinhais,0,0,3,0,0,1,7,3
+Pinhal De São Bento,0,0,3,0,0,0,0,0
+Planaltina Do Paraná,0,0,3,0,0,0,0,0
+Planalto,0,0,3,0,0,1,0,0
+Quatiguá,0,0,3,0,0,1,0,0
+Quinta Do Sol,0,0,3,0,0,1,0,0
+Realeza,0,0,3,0,0,1,0,0
+Ribeirão Do Pinhal,0,0,3,0,0,1,28,0
+Rio Branco Do Ivaí,0,0,3,0,0,0,0,0
+Salto Do Itararé,0,0,3,0,0,0,0,0
+Salto Do Lontra,0,0,3,0,0,0,0,0
+Santa Cruz De Monte Castelo,0,0,3,0,0,1,0,0
+Santa Mônica,0,0,3,0,0,0,1,0
+Santana Do Itararé,0,0,3,0,0,1,0,0
+Santo Antônio Da Platina,0,0,3,0,0,1,1,0
+Santo Antônio Do Caiuá,0,0,3,0,0,1,0,1
+Saudade Do Iguaçu,0,0,3,0,0,1,6,0
+Sengés,0,0,3,0,0,8,4,7
+Siqueira Campos,0,0,3,0,0,1,0,0
+São João Do Caiuá,0,0,3,0,0,1,0,0
+São Pedro Do Ivaí,0,0,3,0,0,0,0,0
+São Pedro Do Paraná,0,0,3,1,1,2,0,0
+Terra Boa,0,0,3,0,0,1,0,0
+Terra Rica,0,0,3,0,0,1,0,0
+Umuarama,0,0,3,0,0,1,4,0
+Wenceslau Braz,0,0,3,0,0,2,0,0
+Ângulo,0,0,3,0,0,0,0,0
+Abatiá,0,0,2,0,0,0,0,0
+Altamira Do Paraná,0,0,2,0,0,1,0,0
+Anahy,0,0,2,0,0,1,2,0
+Apucarana,0,0,2,0,0,2,23,2
+Arapuã,0,0,2,0,0,0,0,0
+Atalaia,0,0,2,0,0,1,0,0
+Bandeirantes,0,0,2,0,1,7,2,1
+Barra Do Jacaré,0,0,2,0,0,1,0,0
+Boa Esperança,0,0,2,0,0,0,1,0
+Borrazópolis,0,0,2,0,0,1,1,0
+Cafelândia,0,0,2,0,0,1,0,0
+Cafezal Do Sul,0,0,2,0,0,1,0,0
+Campina Da Lagoa,0,0,2,0,0,1,0,0
+Campo Mourão,0,0,2,0,0,11,24,2
+Carambeí,0,0,2,0,0,0,6,4
+Cascavel,0,0,2,0,1,7,20,8
+Catanduvas,0,0,2,0,0,1,1,0
+Chopinzinho,0,0,2,0,0,1,6,0
+Cidade Gaúcha,0,0,2,0,0,1,0,0
+Clevelândia,0,0,2,0,0,0,0,0
+Corbélia,0,0,2,0,0,1,0,0
+Cruzeiro Do Iguaçu,0,0,2,0,0,0,10,0
+Cruzeiro Do Sul,0,0,2,0,0,1,0,0
+Douradina,0,0,2,0,0,1,0,0
+Enéas Marques,0,0,2,0,0,0,0,0
+Esperança Nova,0,0,2,0,0,0,0,0
+Fernandes Pinheiro,0,0,2,0,0,15,4,8
+Figueira,0,0,2,0,0,2,0,0
+Florestópolis,0,0,2,0,0,0,2,0
+Flórida,0,0,2,0,0,1,0,0
+Formosa Do Oeste,0,0,2,0,0,0,5,0
+Goioerê,0,0,2,0,0,1,1,0
+Guaporema,0,0,2,0,0,0,0,0
+Guaraci,0,0,2,0,0,1,5,0
+Ibema,0,0,2,0,0,1,0,0
+Iguatu,0,0,2,0,0,1,1,0
+Imbituva,0,0,2,0,0,0,0,1
+Inajá,0,0,2,0,0,1,0,0
+Indianópolis,0,0,2,0,0,1,0,0
+Iporã,0,0,2,0,0,1,0,0
+Iracema Do Oeste,0,0,2,0,0,1,0,0
+Itapejara D'oeste,0,0,2,1,0,0,1,0
+Ivaté,0,0,2,0,0,1,0,0
+Jaboti,0,0,2,0,0,0,0,0
+Jaguariaíva,0,0,2,0,0,15,2,5
+Jardim Alegre,0,0,2,0,0,1,0,0
+Jardim Olinda,0,0,2,0,0,1,0,0
+Jesuítas,0,0,2,0,0,1,1,0
+Juranda,0,0,2,0,0,1,0,0
+Jussara,0,0,2,0,0,0,0,0
+Kaloré,0,0,2,0,0,1,0,0
+Laranjeiras Do Sul,0,0,2,0,0,3,0,0
+Lindoeste,0,0,2,0,0,1,0,0
+Loanda,0,0,2,0,0,0,5,0
+Lobato,0,0,2,0,0,1,4,0
+Luiziana,0,0,2,0,0,1,3,0
+Lunardelli,0,0,2,0,0,1,0,1
+Lupionópolis,0,0,2,0,0,1,5,0
+Mamborê,0,0,2,0,0,0,3,0
+Mandaguaçu,0,0,2,0,0,1,7,0
+Manoel Ribas,0,0,2,0,0,1,0,0
+Maria Helena,0,0,2,0,0,1,3,0
+Mariluz,0,0,2,0,0,1,6,0
+Maripá,0,0,2,0,0,1,1,0
+Mariópolis,0,0,2,0,0,0,0,0
+Mato Rico,0,0,2,0,0,0,0,0
+Moreira Sales,0,0,2,0,0,1,0,0
+Nova Aurora,0,0,2,0,0,1,1,0
+Nova Laranjeiras,0,0,2,0,0,2,0,1
+Nova Olímpia,0,0,2,0,0,1,0,0
+Nova Santa Bárbara,0,0,2,0,0,1,0,0
+Nova Santa Rosa,0,0,2,0,0,0,1,0
+Novo Itacolomi,0,0,2,0,0,1,0,0
+Ourizona,0,0,2,0,0,1,1,0
+Ouro Verde Do Oeste,0,0,2,0,0,1,1,0
+Paiçandu,0,0,2,0,0,1,3,0
+Paraíso Do Norte,0,0,2,0,0,1,2,0
+Pato Bragado,0,0,2,0,0,0,9,0
+Pato Branco,0,0,2,0,0,2,0,0
+Pinhalão,0,0,2,0,0,0,0,0
+Piraí Do Sul,0,0,2,0,0,5,6,8
+Pitangueiras,0,0,2,0,0,0,1,0
+Porecatu,0,0,2,0,0,0,3,0
+Prado Ferreira,0,0,2,0,0,1,2,0
+Presidente Castelo Branco,0,0,2,0,0,1,0,0
+Pérola,0,0,2,0,0,1,2,0
+Quarto Centenário,0,0,2,0,0,0,0,0
+Ramilândia,0,0,2,0,0,1,2,0
+Rancho Alegre,0,0,2,0,0,2,18,0
+Rancho Alegre D'oeste,0,0,2,0,0,1,1,0
+Rio Bom,0,0,2,0,0,1,0,0
+Rio Bonito Do Iguaçu,0,0,2,0,0,0,17,0
+Roncador,0,0,2,0,0,0,0,0
+Rondon,0,0,2,0,0,0,0,0
+Rosário Do Ivaí,0,0,2,0,0,1,0,0
+Sabáudia,0,0,2,0,0,1,2,0
+Salgado Filho,0,0,2,0,0,0,0,0
+Santa Cecília Do Pavão,0,0,2,0,0,1,6,0
+Santa Fé,0,0,2,0,0,1,5,0
+Santa Inês,0,0,2,0,0,1,0,0
+Santa Isabel Do Ivaí,0,0,2,0,0,1,2,0
+Santa Izabel Do Oeste,0,0,2,0,0,1,0,0
+Santa Lúcia,0,0,2,0,0,0,0,0
+Santa Tereza Do Oeste,0,0,2,0,0,1,0,1
+Santo Antônio Do Paraíso,0,0,2,0,0,1,0,0
+Santo Antônio Do Sudoeste,0,0,2,0,0,0,1,0
+Santo Inácio,0,0,2,0,0,1,0,0
+Serranópolis Do Iguaçu,0,0,2,0,1,2,5,0
+São Carlos Do Ivaí,0,0,2,0,0,1,5,0
+São Jorge D'oeste,0,0,2,0,0,0,3,0
+São José Da Boa Vista,0,0,2,0,0,3,0,0
+São José Das Palmeiras,0,0,2,0,0,1,1,0
+São João Do Ivaí,0,0,2,0,0,1,0,0
+São Manoel Do Paraná,0,0,2,0,0,1,0,0
+São Miguel Do Iguaçu,0,0,2,0,0,8,6,0
+São Pedro Do Iguaçu,0,0,2,0,0,1,0,2
+São Sebastião Da Amoreira,0,0,2,0,0,1,9,0
+São Tomé,0,0,2,0,0,0,0,0
+Tamarana,0,0,2,0,0,1,8,1
+Tamboara,0,0,2,0,0,1,5,0
+Tapejara,0,0,2,0,0,1,0,0
+Tapira,0,0,2,0,0,1,0,0
+Terra Roxa,0,0,2,0,0,1,28,0
+Tibagi,0,0,2,0,2,11,3,9
+Tomazina,0,0,2,0,0,3,0,0
+Três Barras Do Paraná,0,0,2,0,0,1,2,1
+Tupãssi,0,0,2,0,0,1,0,0
+Uniflor,0,0,2,0,0,1,0,0
+União Da Vitória,0,0,2,0,1,3,2,0
+Uraí,0,0,2,0,0,1,0,6
+Vera Cruz Do Oeste,0,0,2,0,0,2,2,0
+Verê,0,0,2,0,0,0,0,0
+Vitorino,0,0,2,0,0,0,0,0
+Xambrê,0,0,2,0,0,3,0,0
+Agudos Do Sul,0,0,1,0,0,3,0,0
+Almirante Tamandaré,0,0,1,0,0,2,0,2
+Alto Piquiri,0,0,1,0,0,1,5,0
+Antônio Olinto,0,0,1,0,0,2,0,1
+Ariranha Do Ivaí,0,0,1,0,0,0,0,0
+Balsa Nova,0,0,1,0,1,3,0,5
+Barracão,0,0,1,0,0,0,0,0
+Bituruna,0,0,1,0,0,2,24,0
+Boa Esperança Do Iguaçu,0,0,1,0,0,0,0,0
+Boa Ventura De São Roque,0,0,1,0,0,1,1,0
+Bocaiúva Do Sul,0,0,1,0,1,11,2,3
+Bom Jesus Do Sul,0,0,1,0,0,0,0,0
+Braganey,0,0,1,0,0,1,0,0
+Campina Do Simão,0,0,1,0,0,0,0,1
+Campo Bonito,0,0,1,0,0,0,0,0
+Campo Do Tenente,0,0,1,0,1,3,0,2
+Campo Largo,0,0,1,0,1,10,5,6
+Campo Magro,0,0,1,0,0,0,1,0
+Cerro Azul,0,0,1,0,1,9,1,2
+Colorado,0,0,1,0,0,2,0,0
+Congonhinhas,0,0,1,0,0,1,0,0
+Conselheiro Mairinck,0,0,1,0,0,1,0,0
+Contenda,0,0,1,0,0,0,4,0
+Coronel Domingos Soares,0,0,1,0,0,0,0,0
+Coronel Vivida,0,0,1,0,0,0,0,0
+Cruz Machado,0,0,1,0,0,0,13,0
+Céu Azul,0,0,1,0,0,1,0,1
+Diamante D'oeste,0,0,1,0,0,1,14,0
+Diamante Do Sul,0,0,1,0,0,0,0,0
+Doutor Ulysses,0,0,1,0,0,2,0,0
+Espigão Alto Do Iguaçu,0,0,1,0,0,0,0,0
+Fazenda Rio Grande,0,0,1,0,0,1,0,2
+Flor Da Serra Do Sul,0,0,1,0,0,0,0,0
+Foz Do Jordão,0,0,1,0,0,0,19,1
+Francisco Beltrão,0,0,1,0,0,0,0,0
+General Carneiro,0,0,1,0,0,3,0,0
+Godoy Moreira,0,0,1,0,0,1,0,0
+Goioxim,0,0,1,0,0,0,0,0
+Guamiranga,0,0,1,0,0,0,0,0
+Guaraniaçu,0,0,1,0,0,1,12,0
+Honório Serpa,0,0,1,0,0,0,0,0
+Imbaú,0,0,1,0,0,3,0,2
+Inácio Martins,0,0,1,0,1,0,0,7
+Ipiranga,0,0,1,0,0,0,0,3
+Irati,0,0,1,0,0,0,2,10
+Itambé,0,0,1,0,0,1,1,0
+Itaperuçu,0,0,1,0,1,4,0,1
+Ivaí,0,0,1,0,0,0,0,0
+Japira,0,0,1,0,0,1,0,0
+Jundiaí Do Sul,0,0,1,0,0,2,0,0
+Laranjal,0,0,1,0,0,0,0,0
+Mallet,0,0,1,0,0,1,0,0
+Mandirituba,0,0,1,0,0,0,0,0
+Manfrinópolis,0,0,1,0,0,0,0,0
+Mangueirinha,0,0,1,1,1,1,19,0
+Marquinho,0,0,1,0,0,0,1,0
+Marumbi,0,0,1,0,0,1,0,0
+Nova América Da Colina,0,0,1,0,0,1,0,0
+Nova Esperança,0,0,1,0,0,1,0,0
+Nova Esperança Do Sudoeste,0,0,1,0,0,0,0,0
+Ortigueira,0,0,1,0,0,3,4,2
+Palmas,0,0,1,0,0,3,0,7
+Palmeira,0,0,1,0,3,18,0,2
+Paula Freitas,0,0,1,0,0,0,0,0
+Paulo Frontin,0,0,1,0,0,1,0,0
+Pitanga,0,0,1,0,0,0,0,0
+Piên,0,0,1,0,0,0,0,0
+Porto Amazonas,0,0,1,0,0,1,0,1
+Porto Barreiro,0,0,1,0,0,0,2,0
+Porto Vitória,0,0,1,0,0,0,0,0
+Pranchita,0,0,1,0,0,0,0,0
+Pérola D'oeste,0,0,1,0,0,1,0,0
+Quatro Barras,0,0,1,0,2,13,0,5
+Quitandinha,0,0,1,0,0,1,0,0
+Rebouças,0,0,1,0,0,0,0,0
+Renascença,0,0,1,0,0,0,0,0
+Reserva,0,0,1,0,0,2,0,11
+Reserva Do Iguaçu,0,0,1,0,0,0,2,0
+Rio Azul,0,0,1,0,0,0,0,0
+Rio Branco Do Sul,0,0,1,0,1,5,0,0
+Rio Negro,0,0,1,0,0,5,0,1
+Santa Amélia,0,0,1,0,0,1,0,0
+Santa Maria Do Oeste,0,0,1,0,0,0,0,0
+Santa Mariana,0,0,1,0,0,1,70,0
+Sapopema,0,0,1,0,0,2,7,0
+Sulina,0,0,1,0,0,0,1,0
+São Jorge Do Ivaí,0,0,1,0,0,1,0,0
+São José Dos Pinhais,0,0,1,0,0,16,7,6
+São João,0,0,1,0,0,0,0,0
+São João Do Triunfo,0,0,1,0,1,5,4,1
+Teixeira Soares,0,0,1,0,0,2,0,5
+Tijucas Do Sul,0,0,1,0,5,12,3,2
+Tunas Do Paraná,0,0,1,0,1,5,0,1
+Turvo,0,0,1,0,0,2,1,0
+Ventania,0,0,1,0,0,3,0,2
+Virmond,0,0,1,0,0,0,1,0
