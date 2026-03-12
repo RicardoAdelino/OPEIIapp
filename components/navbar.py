@@ -11,7 +11,7 @@ def create_navbar():
             dbc.NavbarBrand(
                 html.Div([
                     html.Span("Observatório de", style={'fontWeight': '300'}),
-                    html.Span(" Espécies Exóticas", style={'fontWeight': '600', 'color': '#375a7f'})
+                    html.Span(" Espécies Exóticas", style={'fontWeight': '600', 'color': '#bddd3d'})#375a7f
                 ]),
                 href="/",
                 className="me-4"
@@ -19,8 +19,10 @@ def create_navbar():
             dbc.Nav([
                 dbc.NavItem(dbc.NavLink("Início", href="/", active="exact")),
                 dbc.NavItem(dbc.NavLink("Gráficos", href="/graficos")),
-                dbc.NavItem(dbc.NavLink("Formulário", href="/formulario")),
-                dbc.NavItem(dbc.NavLink("Mapas", href="/mapas")),
+                dbc.NavItem(dbc.NavLink("Ocorrencia", href="/ocorrencia")),
+                dbc.NavItem(dbc.NavLink("Indicador", href="/indicador")),
+                #dbc.NavItem(dbc.NavLink("Mapas", href="/mapas")),
+                dbc.NavItem(dbc.NavLink("Modelos", href="/modelos")),
                 dbc.NavItem(dbc.NavLink("Espécies", href="/especies")), 
                 dbc.NavItem(dbc.NavLink("Equipe", href="/equipe"))
             ], navbar=True)

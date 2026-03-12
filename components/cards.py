@@ -14,7 +14,7 @@ def create_info_card(title, description, button_text, href, icon="📊"):
             dbc.Button(
                 button_text, 
                 href=href, 
-                color="primary", 
+                color="info", #"success" "info", "warning" "primary"
                 outline=True
             )
         ], 

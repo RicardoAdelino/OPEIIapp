@@ -1,7 +1,6 @@
 ## Observatório Paranaense de Espécies Exóticas (v0)
 
-Este é o repositório para a aplicação do projeto Observatório Paranaense de Espécies Exóticas.
-Uma ferramenta colaborativa para implementação de tecnologia, monitoramento e gestão de espécies exóticas para o estado do Paraná.
+Este é o repositório para a aplicação interativa do **Observatório Paranaense de Espécies Exóticas** para facilitar a a divulgação do conhecimento que auxilie na divulgação, monitoramento e gestão de espécies exóticas para o estado do Paraná.
 
 A ferramenta permite acesso a informações de:  
 
@@ -22,4 +21,3 @@ Além de ferramentas de interação dinâmica para usos estratégico de mapemane
 
 [dash_mapa.webm](https://github.com/user-attachments/assets/ac7f4f6a-b9b3-4529-920a-e16354a84548)
 
-## Em construção...

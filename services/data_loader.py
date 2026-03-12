@@ -3,8 +3,12 @@ Serviço de Carregamento de Dados
 Implementa padrão Singleton para cache eficiente
 """
 import pandas as pd
+import numpy as np
 import geopandas as gpd
 from config import Config
+import rasterio
+from rasterio.features import geometry_mask
+
 
 class DataLoader:
     _instance = None
@@ -60,4 +64,30 @@ class DataLoader:
         """Retorna lista de habitats únicos"""
         df = self.load_habitat_data()
         return df['habitat'].unique()
+    
+    # Adiciona data_loader das ocorrencias
+    def load_oco_data(self):
+        """Retorna dados de ocorrencias"""
+        if 'db_coords' not in self._data_cache:
+            #oc = pd.read_excel(Config.OCO_PR)
+            oc = pd.read_csv(Config.OCO_PR)
+            oc = oc[['ID','especie','long_dec','lat_dec','ano_final']]
+            # trasnforma pontos em geometria
+            oc = gpd.GeoDataFrame(
+                oc,
+                geometry = gpd.points_from_xy(
+                    oc['long_dec'], 
+                    oc['lat_dec']
+                    ),
+                crs='EPSG:4326'  # ou ajustar conforme o CRS dos seus dados
+            )
+            self._data_cache['db_coords'] = oc
+        return self._data_cache['db_coords']
+    
+    # Teste drop down
+    def get_id_column(self):
+        df = pd.read_csv(Config.OCO_PR)
+        # Supondo que a coluna se chama 'ID'
+        return df['ID'].unique().tolist()
 
+        

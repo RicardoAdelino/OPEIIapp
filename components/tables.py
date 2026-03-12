@@ -62,3 +62,73 @@ def create_data_table(data, table_id='data-table', height='500px'):
             }
         ]
     )
+
+# tabela chart
+#def tabela_dados_grafico(df):
+#    """
+#    Gera a tabela para visualização dos dados filtrados, excluindo coluna geometry.
+#    """
+#    # Remove coluna 'geometry' se existir
+#    df = df.drop(columns=['geometry'], errors='ignore')
+#    # Dicionário de renomeação: original -> novo nome
+#    colunas_novos_nomes = {
+#        #'ID': 'Identificador',
+#        'especie': 'Espécie',
+#        'lon_gdec': 'Longitude',
+#        'lat_dec': 'Latitude',
+#        'ano_final': 'Ano'
+#        # Adicione outros conforme necessário
+#    }
+#    # Renomeia todas que existirem no DataFrame
+#    df = df.rename(columns=colunas_novos_nomes)
+#    
+#    return dash_table.DataTable(
+#        id="tabela-dados-grafico",
+#        columns=[{"name": col, "id": col} for col in df.columns],
+#        data=df.to_dict('records'),
+#        page_size=10,
+#        style_table={'overflowX': 'auto', 'backgroundColor': 'transparent'},
+#        style_cell={'textAlign': 'left', 'padding': '5px', 'backgroundColor': 'transparent'},
+#        style_header={'backgroundColor': '#375a7f', 'color': 'white', 'fontWeight': 'bold'},
+#    )
+
+def tabela_dados_grafico(df):
+    # Remove a coluna geometry se existir
+    df = df.drop(columns=['geometry'], errors='ignore')
+
+    # Agrupa pelos campos desejados e conta os registros
+    df_grouped = (
+        df
+        .groupby(['especie', 'ID', 'ano_final'])
+        .size()
+        .reset_index(name='Nº registros')
+    )
+
+    # Dicionário de renomeação
+    col_nomes = {
+        'especie': 'Espécie',
+        'ID': 'Identificador',
+        'ano_final': 'Ano',
+        'Nº registros': 'Nº de Registros'
+    }
+
+    # Renomeia colunas
+    df_grouped = df_grouped.rename(columns=col_nomes).sort_values(by='Nº de Registros', ascending=False)
+
+    # Monta colunas para o Dash
+    columns_setup = [
+        {"name": col_nomes.get(orig, orig), "id": nome}
+        for orig, nome in zip(df_grouped.columns, df_grouped.columns)
+    ]
+
+    return dash_table.DataTable(
+        id="tabela-dados-grafico",
+        columns=columns_setup,
+        data=df_grouped.to_dict('records'),
+        page_size=20,
+        style_table={'overflowX': 'auto', 'backgroundColor': 'transparent'},
+        style_cell={'textAlign': 'left', 'padding': '5px', 'backgroundColor': 'transparent'},
+        style_header={'backgroundColor': '#375a7f', 'color': 'white', 'fontWeight': 'bold'},
+    )
+
+

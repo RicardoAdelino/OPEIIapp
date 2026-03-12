@@ -43,7 +43,7 @@
 """
 Componente de Rodapé
 """
-from dash import html
+from dash import html,dcc
 import dash_bootstrap_components as dbc
 from datetime import datetime
 
@@ -112,7 +112,39 @@ def create_footer():
                             html.A([html.I(className="fas fa-envelope"), " Contato"], 
                                   href="mailto:contato@projeto.br",
                                   style={'color': '#bddd3d', 'textDecoration': 'none'})
-                        ])
+                        ]), 
+                        html.H6(
+                            "Financiamento:", 
+                            className="mb-3", 
+                            style={'fontWeight': '600'}
+                            
+                            ),
+                        html.P(
+                            [
+                                'Fundação Araúcaria - Novo Arranjo de Pesquisa e Inovação • NAPi',
+                            ]
+                        ), 
+                        html.H6(
+                            "Projeto interelacionados:", 
+                            className="mb-3", 
+                            style={'fontWeight': '600'}),
+                        html.P(
+                            [
+                            dcc.Link(
+                                "Napi Biodiversidade",
+                                href = "https://napibiodiversidade.eco.br",
+                                className="mb-3", 
+                                style={'fontWeight': '600','color': '#bddd3d', 'textDecoration': 'none'}
+                                ),
+                            html.Br(),
+                            dcc.Link(
+                                "Napi Serviços Ecossistemicos",
+                                href = "https://napibiodiversidade.eco.br/sobre-napi-servicos-ecossistemicos/",
+                                className="mb-3", 
+                                style={'fontWeight': '600','color': '#bddd3d', 'textDecoration': 'none'}
+                                )
+                            ]
+                        )
                     ])
                 ], md=4),
                 

@@ -1,7 +1,7 @@
 """
 Página Home da Aplicação
 """
-from dash import html
+from dash import html,dcc
 import dash_bootstrap_components as dbc
 from components.cards import create_info_card, create_stat_card
 from config import Config
@@ -50,6 +50,29 @@ def _create_hero_section():
                     className="lead mb-4",
                     style={'color': Config.COLORS['text_secondary'], 'fontSize': '25px'}
                 ),
+            #teste
+                dcc.Markdown(
+                    """
+                        **Diagnóstico espacial estratégico:** identifique rapidamente áreas críticas e otimize o planejamento de ações preventivas e corretivas.
+
+                        **Foco em pontos quentes:** Avalie regiões com alta concentração de registros e facilite o direcionamento de esforços de monitoramento e controle.
+
+                        **Monitoramento detalhado:** Acompanhe o avanço dos registros no tempo e no espaço e promova intervenções baseadas em evidências.
+
+                        **Valor para pesquisa e gestão:** Acesse informações para subsidiar pesquisa, políticas públicas e ações de educação ambiental.
+
+                    """, 
+                    style={
+                        'textAlign': 'justify',
+                        'backgroundColor':Config.COLORS['secondary'],  
+                        'padding': '10px',  # Espaçamento interno
+                        'borderRadius': '10px',  # Bordas arredondadas
+                        'color': '#FFFFFF',  # Cor do texto (branco para contraste com fundo escuro)
+                        'width': '90%',  # 60% da largura da tela
+                        'margin': '0 auto'
+                    }
+                ),
+            #
                 html.Hr(style={'borderColor': Config.COLORS['primary'], 'width': '100px', 'margin': '30px 0'})
             ], className="text-center", style={'padding': '80px 0'})
         ])
@@ -63,28 +86,28 @@ def _create_feature_cards():
             'description': 'Visualizações interativas e análises descritivas dos dados de espécies exóticas.',
             'button': 'Explorar Gráficos',
             'href': '/graficos',
-            'icon': '📊'
+            'icon': ''#📊
         },
         {
             'title': 'Mapas Interativos',
             'description': 'Distribuição espacial e mapeamento territorial das espécies.',
             'button': 'Ver Mapas',
             'href': '/mapas',
-            'icon': '🗺️'
+            'icon': ''#🗺️
         },
         {
             'title': 'Registro de Dados',
             'description': 'Formulários para cadastro e atualização de informações das espécies exóticas.',
             'button': 'Acessar Formulário',
             'href': '/formulario',
-            'icon': '📝'
+            'icon': ''#📝
         },
         {
             'title': 'Espécies',
             'description': 'Banco de dados completo com informações detalhadas sobre cada espécie.',
             'button': 'Consultar Espécies',
             'href': '/especies',
-            'icon': '🔍'
+            'icon': ''#🔍
         }
     ]
     
@@ -114,15 +137,15 @@ def _create_about_section():
                     """, style={'lineHeight': '1.6', 'fontSize': '16px'}),
                     dbc.Row([
                         dbc.Col([
-                            html.H5("🎯 Missão"),
+                            html.H5("Missão"), #🎯
                             html.P("Promover o conhecimento e gestão adequada de espécies exóticas no Paraná.")
                         ], md=4),
                         dbc.Col([
-                            html.H5("👁️ Visão"),
-                            html.P("Ser referência em monitoramento e pesquisa de espécies exóticas no Brasil.")
+                            html.H5("Visão"), #👁️ 
+                            html.P("Ser referência em monitoramento e pesquisa de espécies exóticas no Paraná.")
                         ], md=4),
                         dbc.Col([
-                            html.H5("🤝 Valores"),
+                            html.H5("Valores"),#🤝 
                             html.P("Transparência, precisão científica e acessibilidade da informação.")
                         ], md=4)
                     ], className="mt-4")
