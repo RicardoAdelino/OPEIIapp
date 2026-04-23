@@ -21,6 +21,9 @@ Abaixo, imagem da tela inicial da aplicação
 
 
 Além de ferramentas de interação dinâmica para usos estratégico de mapemaneto territorial.
-
+<!--
 [dash_mapa.webm](https://github.com/user-attachments/assets/ac7f4f6a-b9b3-4529-920a-e16354a84548)
+-->
+
+[dash_mapa.webm](https://github.com/user-attachments/assets/e556acd1-0764-423f-b2c3-a3fbe281417b)
 
