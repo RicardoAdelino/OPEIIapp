@@ -1,4 +1,6 @@
 
+
+
 ## Observatório Paranaense de Espécies Exóticas (v0)
 
 Este é o repositório para a aplicação interativa do **Observatório Paranaense de Espécies Exóticas** para facilitar a a divulgação do conhecimento que auxilie na divulgação, monitoramento e gestão de espécies exóticas para o estado do Paraná.
