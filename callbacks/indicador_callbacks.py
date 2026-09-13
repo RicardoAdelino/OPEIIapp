@@ -45,7 +45,10 @@ def register_mapa_callbacks(app):
         # 2. Pegue as classes únicas ordenadas (ex: ['1', '2', '3', '4'])
         # Substitua 'Classe_Que_Sera_Cinza' pelo nome real da sua classe (ex: '0' ou 'Sem dados')
         classe_cinza = 'Deficiente de dados' 
-        classes_restantes = [c for c in sorted(df_habitat['quantile_class'].unique()) if c != classe_cinza]
+        classe_risco = ['Muito Alto','Alto','Médio','Baixo','Muito Baixo'] 
+        classe_risco = classe_risco[::-1]
+        #classes_restantes = [c for c in sorted(df_habitat['quantile_class'].unique()) if c != classe_cinza]
+        classes_restantes = [c for c in classe_risco if c != classe_cinza]
 
         # 3. Pega as cores vermelhas necessárias para as classes restantes
         cores_vermelhas = px.colors.sample_colorscale(px.colors.sequential.Reds, len(classes_restantes))
@@ -78,7 +81,7 @@ def register_mapa_callbacks(app):
             margin={"r": 10, "t": 50, "l": 10, "b": 10},
             paper_bgcolor=Config.COLORS['background'],
             plot_bgcolor=Config.COLORS['background'],
-            legend_title_text="Classificação",
+            #legend_title_text="Classificação",
             font=dict(color=Config.COLORS['text'], family="Arial"),
             title={
                 'x': 0.5,
@@ -95,7 +98,7 @@ def register_mapa_callbacks(app):
         #fig.update_traces(hovertemplate="<b>%{hovertext}</b><br>Classificação: %{z}")
         fig.update_traces(
             hovertemplate='<b>Município</b>: %{hovertext}<br>'
-            '<b>Classificação</b>: %{z}'
+            #'<b>Classificação</b>: %{z}'
             '<extra></extra>',
             hoverinfo='text'  # ← Remove a divis~ao de cores!
         )
