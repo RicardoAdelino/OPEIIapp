@@ -17,7 +17,8 @@ class DataProcessor:
     def get_merged_meta_data(self):
         """Mescla dados meta com dados do mapa"""
         df_meta = self.loader.load_meta_map_data()
-        df_mapa = self.loader.load_vul_min_geojson()
+        df_mapa = self.loader.load_pr_geojson()
+        #df_mapa = self.loader.load_vul_min_geojson()
         meta_ = df_meta.merge(df_mapa, on='name_muni', how='left')
         return meta_
     
@@ -118,11 +119,19 @@ class DataProcessor:
         gdf = self.loader.load_pr_geojson()
     
         # MAPEAMENTO PERSONALIZADO DAS CLASSES
+        #class_mapping = {
+        #    0: "Atenção",
+        #    1: "Preocupante", 
+        #    2: "Vulnerável",
+        #    3: "Muito Vulnerável"
+        #}
         class_mapping = {
-            0: "Atenção",
-            1: "Preocupante", 
-            2: "Vulnerável",
-            3: "Muito Vulnerável"
+            0: "Muito baixa",
+            1: "Baixa",
+            2: "Moderada",
+            3: "Alta",
+            4: "Muito alta",
+            5: "Crítica"
         }
 
         # Configuração dos grupos de rasters
@@ -130,14 +139,40 @@ class DataProcessor:
             'Vert_ter': {
                 'raster_a': Config.VERT_TER_CL,
                 'raster_b': Config.VERT_TER_CP,
-                'label_b': 'Pressão colonização (Vert)'
+                'label_b': 'Pressão colonização (Vertebrados Terrestres)'
+            },
+            'Invert_ter': {
+                'raster_a': Config.INV_TER_CL,  # Adicione o caminho correto no Config
+                'raster_b': Config.INV_TER_CP,  # Adicione o caminho correto no Config
+                'label_b': 'Pressão colonização (Invertebrados Terrestres)'
             },
             'Plant_ter': {
                 'raster_a': Config.PLANT_TER_CL,  # Adicione o caminho correto no Config
                 'raster_b': Config.PLANT_TER_CP,  # Adicione o caminho correto no Config
+                'label_b': 'Pressão colonização (Plantas Terrestres)'
+            },
+            # ADICIONAR AS DEMAIS CAMADAS
+            'Plant_aqua': {
+                'raster_a': Config.PLANT_AQ_CL,  # Adicione o caminho correto no Config
+                'raster_b': Config.PLANT_AQ_CP,  # Adicione o caminho correto no Config
                 'label_b': 'Pressão colonização (Plant)'
+            }, 
+            'Vert_aqua': {
+                'raster_a': Config.VERT_AQ_CL,  # Adicione o caminho correto no Config
+                'raster_b': Config.VERT_AQ_CP,  # Adicione o caminho correto no Config
+                'label_b': 'Pressão colonização (Vertebrados Aquaticos)'
+            }, 
+            'Invert_aqua': {
+                'raster_a': Config.INV_AQ_CL,  # Adicione o caminho correto no Config
+                'raster_b': Config.INV_AQ_CP,  # Adicione o caminho correto no Config
+                'label_b': 'Pressão colonização (Invertebrados Aquaticos)'
             }
         }
+
+        #pr = self.loader.load_pr_geojson() #==> novo1
+
+        # União de todos os municípios em uma única geometria
+        #pr_geometry = [pr.geometry.union_all()] #==> novo1
 
         # Dicionário para armazenar os DataFrames de cada grupo
         grouped_data = {}
@@ -209,7 +244,6 @@ class DataProcessor:
             grouped_data[group_name] = pd.DataFrame(data_list)
 
         return grouped_data
-
 
 # Prepara dados para o raster
 # def get_raster_data(self):

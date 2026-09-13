@@ -100,9 +100,13 @@ def get_modelo_layout():
                         id = 'raster-group-dropdown',
                         options = [
                             {'label': 'Vertebrados Terrestres', 'value': 'Vert_ter'},
-                            {'label': 'Plantas Terrestres', 'value': 'Plant_ter'}
+                            {'label': 'Invertebrados Terrestres', 'value': 'Invert_ter'},
+                            {'label': 'Plantas Terrestres', 'value': 'Plant_ter'},
+                            {'label': 'Plantas Aquáticas', 'value': 'Plant_aqua'},
+                            {'label': 'Vertebrados Aquáticos', 'value': 'Vert_aqua'},
+                            {'label': 'Invertebrados Aquáticos', 'value': 'Invert_aqua'}
                         ],
-                        value='Vert_ter',  # Valor padrão
+                        #value='Vert_ter',  # Valor padrão
                         placeholder = "Selecione a categoria de interesse",
                         className='custom-dropdown',   # chave para CSS consistente
                         style={'width': '100%', 'maxWidth': '350px', 'margin': '0 auto','textAlign': 'center'}

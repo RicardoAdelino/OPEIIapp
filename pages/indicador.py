@@ -33,15 +33,18 @@ def _create_indicator_header():
         dbc.Col([
             html.Div([
                 html.H3(
-                    "Acompanhe o indicador de vulnerabilidade espacial das espécies exóticas no Paraná",
+                    "Acompanhe a exposição dos municípios às espécies exóticas",
                     className="text-center mb-4",
                     style={'color': Config.COLORS['text'], 'fontWeight': '300'}
                 ),
                 dcc.Markdown([
                     """
-                    Acompanhe nosso indicador de vulnerabilidade espacial para as espécies exóticas no Paraná.
-                    Essa ferramenta foi desenvolvida pelo Observatório para facilitar a visualização de áreas sensíveis à invasão, apoiar decisões estratégicas de conservação e 
-                    fortalecer o compromisso coletivo com o manejo e proteção da biodiversidade nativa do estado.
+                    Nosso mapa municipal indica a densidade de espécies exóticas por quilômetro quadrado de município. 
+                    Uma vez que a pressão de colonização (i.e., número de espécies não nativas) é uma das medidas associadas aos riscos ambientais e sociais, 
+                    a densidade de espécies permite inferir o nível de exposição dos municípios aos impactos decorrentes das espécies exóticas. 
+                    Essa ferramenta foi desenvolvida pelo Observatório para facilitar a visualização de áreas sensíveis à invasão, 
+                    apoiar decisões estratégicas de conservação e fortalecer o compromisso coletivo com o manejo e proteção da biodiversidade nativa do estado.
+                    
                     """],
                     className="mb-4",
                     style={
@@ -73,9 +76,13 @@ def _create_habitat_selector(habitat_list):
                     ),
                     dcc.Dropdown(
                         id='habitat-picker',
+                        className='custom-dropdown',
                         value=habitat_list[1] if len(habitat_list) > 1 else habitat_list[0],
                         options=[{'label': hab, 'value': hab} for hab in habitat_list],
+                        placeholder="Selecione a categoria de interesse", #Mantem celula vazia
                         clearable=False,
+                        #clearable=True,
+                        #className='custom-dropdown',   # chave para CSS consistente
                         style={
                             'width': '100%', 
                             'maxWidth': '350px', 
@@ -85,8 +92,7 @@ def _create_habitat_selector(habitat_list):
                     )
                 ], style={'padding': '20px'})
             ], 
-            className='custom-dropdown',   # chave para CSS consistente
-            #className="shadow-sm", 
+            className="shadow-sm",
               style={
                   'backgroundColor': 'transparent',
                   'border': '1px solid transparent',

@@ -29,23 +29,36 @@ def register_modelos_callbacks(app):
         Output('modelos-map', 'figure'),
         Input('raster-group-dropdown', 'value')
     )
+
     def update_modelos_map(selected_group):
         # MAPEAMENTO PERSONALIZADO DAS CLASSES
+
         class_mapping = {
-            0: "Atenção",
-            1: "Preocupante",
-            2: "Vulnerável",
-            3: "Muito Vulnerável"
+            0: "Muito baixa",
+            1: "Baixa",
+            2: "Moderada",
+            3: "Alta",
+            4: "Muito alta",
+            5: "Crítica"
         }
         
         # Definir cores para cada classe
-        class_colors = {
-            "Muito Vulnerável": "#e41a1c",
-            "Vulnerável": "#ff7f00",
-            "Preocupante": "#4daf4a",
-            "Atenção": "#377eb8"
-        }
+        #class_colors = {
+        #    "Muito Vulnerável": "#e41a1c",
+        #    "Vulnerável": "#ff7f00",
+        #    "Preocupante": "#4daf4a",
+        #    "Atenção": "#377eb8"
+        #}
         
+        class_colors = {
+            "Muito baixa": "#2166ac",
+            "Baixa": "#67a9cf",
+            "Moderada": "#d1e5f0",
+            "Alta": "#fddbc7",
+            "Muito alta": "#ef8a62",
+            "Crítica": "#b2182b"
+        }
+
         # Verificar se há grupos disponíveis
         if not raster_groups:
             return create_empty_figure(geojson_data, pr_geojson, 
@@ -74,19 +87,28 @@ def register_modelos_callbacks(app):
         fig = go.Figure()
         
         # Ordem preferencial das classes
-        class_order = ["Atenção", "Preocupante", "Vulnerável", "Muito Vulnerável"]
+        #class_order = ["Atenção", "Preocupante", "Vulnerável", "Muito Vulnerável"]
+        class_order = [
+            "Muito baixa",
+            "Baixa",
+            "Moderada",
+            "Alta",
+            "Muito alta",
+            "Crítica"
+        ]
         
         # Adicionar pontos para cada categoria separadamente
         for class_name in class_order:
             if class_name in df_combined['value_a_class'].values:
                 df_category = df_combined[df_combined['value_a_class'] == class_name]
                 
-                fig.add_trace(go.Scattermapbox(
+                fig.add_trace(go.Scattermap(
                     lat=df_category['y_coord'],
                     lon=df_category['x_coord'],
                     mode='markers',
                     marker=dict(
-                        size=6,
+                        size=8,
+                        #symbol="square",
                         color=class_colors[class_name],
                         opacity=0.85
                     ),
@@ -106,7 +128,7 @@ def register_modelos_callbacks(app):
         
         # === CONTORNOS PROFISSIONAIS ===
         # Layer 1: Sombra/base escura
-        fig.add_trace(go.Choroplethmapbox(
+        fig.add_trace(go.Choroplethmap(
             geojson=geojson_data,
             locations=pr_geojson.index,
             z=[0] * len(pr_geojson),
@@ -120,7 +142,7 @@ def register_modelos_callbacks(app):
         ))
         
         # Layer 2: Linha clara principal
-        fig.add_trace(go.Choroplethmapbox(
+        fig.add_trace(go.Choroplethmap(
             geojson=geojson_data,
             locations=pr_geojson.index,
             z=[0] * len(pr_geojson),
@@ -134,7 +156,7 @@ def register_modelos_callbacks(app):
         ))
         
         # Layer 3: Linha fina brilhante
-        fig.add_trace(go.Choroplethmapbox(
+        fig.add_trace(go.Choroplethmap(
             geojson=geojson_data,
             locations=pr_geojson.index,
             z=[0] * len(pr_geojson),
@@ -149,7 +171,7 @@ def register_modelos_callbacks(app):
         
         # Layout
         fig.update_layout(
-            mapbox=dict(
+            map=dict(
                 style='carto-darkmatter',
                 zoom=6,
                 center=dict(lat=-24.845946, lon=-51.557551)
@@ -180,14 +202,13 @@ def register_modelos_callbacks(app):
         )
         
         return fig
-
-
+    
 def create_empty_figure(geojson_data, pr_geojson, message):
     """Cria uma figura vazia com mensagem de erro"""
     fig = go.Figure()
     
     # Adicionar apenas os contornos
-    fig.add_trace(go.Choroplethmapbox(
+    fig.add_trace(go.Choroplethmap(
         geojson=geojson_data,
         locations=pr_geojson.index,
         z=[0] * len(pr_geojson),
@@ -201,7 +222,7 @@ def create_empty_figure(geojson_data, pr_geojson, message):
     
     # Layout com mensagem
     fig.update_layout(
-        mapbox=dict(
+        map=dict(
             style='carto-darkmatter',
             zoom=6.5,
             center=dict(lat=-24.845946, lon=-51.557551)

@@ -50,8 +50,8 @@ def get_ocorrencia_layout():
                         min = 1950,
                         max = 2025,
                         step = 1,
-                        value = 1900,
-                        marks = {ano: str(ano) for ano in range(1950, 2026, 2)},
+                        value = 1950,
+                        marks = {ano: str(ano) for ano in range(1950, 2026, 5)},
                         tooltip = {"placement": "bottom", "always_visible": True},
                         included = True,
                         updatemode = 'mouseup'

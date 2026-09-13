@@ -1,6 +1,3 @@
-
-
-
 ## Observatório Paranaense de Espécies Exóticas (v0)
 
 Este é o repositório para a aplicação interativa do **Observatório Paranaense de Espécies Exóticas** para facilitar a a divulgação do conhecimento que auxilie na divulgação, monitoramento e gestão de espécies exóticas para o estado do Paraná.
@@ -21,9 +18,6 @@ Abaixo, imagem da tela inicial da aplicação
 
 
 Além de ferramentas de interação dinâmica para usos estratégico de mapemaneto territorial.
-<!--
-[dash_mapa.webm](https://github.com/user-attachments/assets/ac7f4f6a-b9b3-4529-920a-e16354a84548)
--->
 
-[dash_mapa.webm](https://github.com/user-attachments/assets/e556acd1-0764-423f-b2c3-a3fbe281417b)
+[dash_mapa.webm](https://github.com/user-attachments/assets/ac7f4f6a-b9b3-4529-920a-e16354a84548)
 

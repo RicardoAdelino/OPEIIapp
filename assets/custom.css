@@ -1,75 +1,137 @@
-/* ------- DROPDOWN CUSTOMIZADO -------- */
-/* Caixa: fundo translúcido */
-.Select-control,
-.Select__control,
-div[class*="control"] {
-    background:#cbfd02ac !important;
-    border: 1.5px solid #4a7cb83c !important;
-    border-radius: 8px !important;
+/* =========================================================
+   TEMA DO DASHBOARD
+   Substitua integralmente o conteúdo de assets/custom.css
+   ========================================================= */
+
+:root {
+    --bg-page: #222222;
+    --bg-control: #1f2933;
+    --bg-hover: #375a7f;
+    --border-control: #4a7cb8;
+    --border-focus: #7fb3e8;
+    --text-primary: #ffffff;
+    --text-muted: #dce8b0;
+    --lime: #ccff00;
+    --lime-hover: #dfff45;
+}
+
+/* =========================================================
+   DROPDOWN (Dash react-select, versões antiga e atual)
+   Escopo explícito: use className="custom-dropdown".
+   ========================================================= */
+/* ==========================================================================
+   CUSTOM DROPDOWN - DASHBOARD COMPATIVEL COM DASH 2.X (DARK MODE)
+   ========================================================================== */
+.custom-dropdown,
+.custom-dropdown * {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    caret-color: var(--text-primary) !important;
+}
+
+/* 1. O Campo Principal do Dropdown (Onde fica o texto selecionado) */
+.custom-dropdown div[class*="-control"] {
     min-height: 45px !important;
-    transition: all 0.3s ease;
-}
-
-/* Valor selecionado, placeholder e opções - cor viva */
-.Select-value,
-.Select__single-value,
-div[class*="singleValue"],
-div[class*="placeholder"],
-.Select__single-value,
-.Select__placeholder {
-    color: white !important;           /* Verde limão brilhante */
-    opacity: 1 !important;
-    background: transparent !important;
-    text-shadow: 0 1px 4px #232a3be0 !important; /* Sombra escura */
-}
-
-/* Input texto e opções */
-.Select-input,
-div[class*="Input"] input,
-.Select-option,
-div[class*="option"] {
-    color: white !important;
-    opacity: 1 !important;
-    background: transparent !important;
-    text-shadow: 0 1px 4px #232a3bc0 !important;
-}
-
-/* Menu dropdown */
-.Select-menu-outer,
-div[class*="menu"] {
-    background: transparent !important;
-    border: 1px solid #375a7f !important;
+    background-color: var(--bg-control) !important; /* Seu tom #1f2933 */
+    border: 1.5px solid var(--border-control) !important;
     border-radius: 8px !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important
+}
+
+/* Estado de Hover e Foco no campo principal */
+.custom-dropdown div[class*="-control"]:hover,
+.custom-dropdown div[class*="-control"][class*="-isFocused"] {
+    border-color: var(--border-focus) !important;
+    box-shadow: 0 0 0 2px rgba(74, 124, 184, 0.25) !important;
+    color: var(--text-primary) !important;
+}
+
+/* 2. Textos internos do campo principal (Placeholder, Valor Selecionado e Input) */
+.custom-dropdown div[class*="-placeholder"],
+.custom-dropdown div[class*="-singleValue"],
+.custom-dropdown input {
+    color: var(--text-primary) !important; /* Texto branco */
+    opacity: 1 !important;
+}
+
+/* 3. O Menu Suspenso (agora translúcido, consistente com o resto do tema) */
+.custom-dropdown div[class*="-menu"] {
+    background-color: rgba(31, 41, 51, 0.75) !important; /* antes: var(--bg-control) sólido */
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    border: 1.5px solid var(--border-control) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55) !important;
     z-index: 9999 !important;
 }
 
+/* A lista interna herda o fundo translúcido do menu, sem opacar por cima */
+.custom-dropdown div[class*="-MenuList"] {
+    background-color: transparent !important;
+}
 
-/* ========================
-   FORMULÁRIOS E INPUTS
-======================== */
+/* 4. Barra de Pesquisa Interna (Se aplicável) */
+.custom-dropdown div[class*="-menu"] input {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--border-control) !important;
+    color: var(--text-primary) !important;
+}
+
+/* 5. As Opções da Lista (Ex: 'terrestrial_vertebrate') */
+.custom-dropdown div[class*="-option"] {
+    background-color: transparent !important; /* Herda o fundo do menu */
+    color: var(--text-primary) !important;   /* Texto em branco */
+    cursor: pointer !important;
+}
+
+/* Opção quando o usuário passa o mouse por cima (Hover) */
+.custom-dropdown div[class*="-option"][class*="-isFocused"] {
+    background-color: var(--bg-hover) !important; /* Seu tom #375a7f */
+    color: var(--text-primary) !important;
+}
+
+/* Opção que já está atualmente selecionada na lista */
+.custom-dropdown div[class*="-option"][class*="-isSelected"] {
+    background-color: var(--border-control) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* 6. Ícones e Setas Laterais */
+.custom-dropdown div[class*="-indicatorContainer"],
+.custom-dropdown svg {
+    color: var(--text-primary) !important;
+    fill: var(--text-primary) !important;
+}
+
+/* =========================================================
+   FORMULÁRIOS
+   ========================================================= */
 
 .form-label,
 .form-check-label {
-    color: #FFFFFF !important;
+    color: var(--text-primary) !important;
     font-weight: 500;
     margin-bottom: 8px;
     margin-left: 10px;
 }
 
-.form-control, .form-select {
-    background: rgba(55,90,127,0.18) !important; /*rgba(55,90,127,0.18)*/
+.form-control,
+.form-select {
+    background: rgba(55, 90, 127, 0.18) !important;
     border: 1px solid #375a7f !important;
-    color: #FFFFFF !important;
+    color: var(--text-primary) !important;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
-.form-control:focus, .form-select:focus {
-    background: rgba(55,90,127,0.18) !important; /*rgba(55,90,127,0.18)*/
+.form-control:focus,
+.form-select:focus {
+    background: rgba(55, 90, 127, 0.18) !important;
     border-color: #4a7bb8;
     box-shadow: 0 0 0 3px rgba(74, 123, 184, 0.1);
-    color: #FFFFFF;
+    color: var(--text-primary);
 }
 
 .form-control::placeholder {
@@ -77,89 +139,86 @@ div[class*="menu"] {
 }
 
 textarea.form-control {
-    resize: vertical;
     min-height: 100px;
+    resize: vertical;
 }
 
-.form-check-input:checked {
-    background: rgba(55,90,127,0.18) !important; /*rgba(55,90,127,0.18)*/
+.form-check-input:checked,
+.form-switch .form-check-input {
+    background: rgba(55, 90, 127, 0.18) !important;
     border-color: #375a7f;
 }
+
 .form-switch .form-check-input {
-    background: rgba(55,90,127,0.18) !important; /*rgba(55,90,127,0.18)*/
-    border-color: #555555;
     width: 3em;
     height: 1.5em;
 }
 
-/* ========================
-   ALERTAS
-======================== */
+/* =========================================================
+   ALERTAS E BOTÕES
+   ========================================================= */
 
 .alert {
     border: none;
     border-radius: 8px;
     font-weight: 500;
 }
+
 .alert-success {
-    background: rgba(55,90,127,0.18) !important;
+    background: rgba(55, 90, 127, 0.18) !important;
     color: #28a745;
     border-left: 4px solid #28a745;
 }
+
 .alert-danger {
     background-color: rgba(220, 53, 69, 0.2);
     color: #dc3545;
     border-left: 4px solid #dc3545;
 }
+
 .alert-warning {
     background-color: rgba(255, 193, 7, 0.2);
     color: #ffc107;
     border-left: 4px solid #ffc107;
 }
 
-/* ========================
-   BOTÕES
-======================== */
-
 .btn-primary {
-    background: rgba(55,90,127,0.18) !important; /*rgba(55,90,127,0.18)*/
+    background: rgba(55, 90, 127, 0.18) !important;
     border: none;
+    border-radius: 8px;
     padding: 12px 30px;
     font-weight: 600;
-    border-radius: 8px;
     transition: all 0.3s ease;
 }
+
 .btn-primary:hover {
-    background: rgba(55,90,127,0.18) !important; /*rgba(55,90,127,0.18)*/
-    transform: translateY(-2px);
+    background: rgba(55, 90, 127, 0.35) !important;
     box-shadow: 0 4px 15px rgba(55, 90, 127, 0.3);
+    transform: translateY(-2px);
 }
 
-/* ========================
-   INFO CARDS
-======================== */
+/* =========================================================
+   CARDS E TABELAS
+   ========================================================= */
 
 .info-card {
-    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     border: none;
     border-radius: 12px;
-    padding: 20px;
     margin-bottom: 20px;
+    padding: 20px;
 }
+
 .info-card h5 {
     color: #375a7f;
     margin-bottom: 10px;
 }
+
 .info-card p {
-    color: #CCCCCC;
+    color: #cccccc;
     line-height: 1.5;
 }
 
-/* ========================
-   TABELAS & DASH
-======================== */
-
-/* Mesclei regras das tabelas/dash-table abaixo */
 .dash-table-container .dash-spreadsheet-container,
 .dash-table-container .dash-spreadsheet {
     background-color: transparent !important;
@@ -168,120 +227,221 @@ textarea.form-control {
 
 .dash-table-container .dash-cell {
     background-color: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     cursor: pointer !important;
-    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
-    /*transition: background-color 0.1s cubic-bezier(.4,0,.2,1) ease !important;*/
     transition: none !important;
-
 }
+
 .dash-table-container .dash-cell:hover,
 .dash-table-container tr:hover td {
     background-color: rgba(55, 90, 127, 0.75) !important;
-    transition: none ease !important;
+    transition: none !important;
 }
+
 .dash-table-container .dash-header {
-    background-color: transparent !important; /*375a7f*/
     position: sticky;
     top: 0;
     z-index: 1;
-    border-bottom: 2px solid rgba(255,255,255,0.2) !important;
-    /*transition: background-color 0.1s cubic-bezier(.4,0,.2,1) ease !important;*/
+    background-color: transparent !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
     transition: none !important;
 }
-/*
-.dash-table-container .dash-cell,
-.dash-table-container .dash-header {
-    background-color: transparent !important; /*375a7f
-    color: #FFFFFF !important;
-    transition: none !important;
+
+/* =========================================================
+   SLIDERS Dash dcc.Slider / rc-slider
+
+   A estrutura do rc-slider usa:
+   - .rc-slider-rail: faixa integral
+   - .rc-slider-track: faixa ativa
+   - .rc-slider-handle: alça
+   As regras possuem seletor específico e !important para
+   prevalecer sobre os estilos injetados pelo componente.
+   ========================================================= */
+
+.rc-slider,
+.rc-slider.rc-slider-with-marks {
+    position: relative !important;
+    height: 22px !important;
+    margin: 22px 12px 42px !important;
+}
+
+.rc-slider .rc-slider-rail,
+.rc-slider-rail {
+    height: 8px !important;
+    background: var(--lime) !important;
+    background-color: var(--lime) !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    opacity: 1 !important;
+    box-shadow: 0 0 4px rgba(204, 255, 0, 0.85), 0 0 10px rgba(204, 255, 0, 0.5) !important;
+}
+
+.rc-slider .rc-slider-track,
+.rc-slider-track,
+.rc-slider .rc-slider-track-1,
+.rc-slider-track-1 {
+    height: 8px !important;
+    background: var(--lime) !important;
+    background-color: var(--lime) !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    opacity: 1 !important;
+    box-shadow: 0 0 4px rgba(204, 255, 0, 0.95), 0 0 10px rgba(204, 255, 0, 0.65) !important;
+}
+
+.rc-slider.rc-slider-disabled .rc-slider-rail,
+.rc-slider.rc-slider-disabled .rc-slider-track {
+    background: var(--lime) !important;
+    background-color: var(--lime) !important;
+    opacity: 1 !important;
+}
+
+.rc-slider .rc-slider-handle,
+.rc-slider-handle {
+    box-sizing: border-box !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: -5px !important;
+    background: var(--lime) !important;
+    background-color: var(--lime) !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50% !important;
+    opacity: 1 !important;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.65), 0 0 12px rgba(204, 255, 0, 1) !important;
+}
+
+.rc-slider .rc-slider-handle:hover,
+.rc-slider .rc-slider-handle:focus,
+.rc-slider .rc-slider-handle:active,
+.rc-slider .rc-slider-handle-click-focused,
+.rc-slider-handle:hover,
+.rc-slider-handle:focus,
+.rc-slider-handle:active {
+    background: var(--lime-hover) !important;
+    background-color: var(--lime-hover) !important;
+    border-color: #ffffff !important;
+    outline: none !important;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 16px rgba(204, 255, 0, 1) !important;
+}
+
+.rc-slider .rc-slider-handle:focus-visible,
+.rc-slider-handle:focus-visible {
+    outline: none !important;
+}
+
+.rc-slider .rc-slider-dot,
+.rc-slider-dot {
+    display: none !important;
+}
+/*.rc-slider-dot {
+    box-sizing: border-box !important;
+    width: 9px !important;
+    height: 9px !important;
+    bottom: -1px !important;
+    background: var(--lime) !important;
+    background-color: var(--lime) !important;
+    border: 2px solid var(--lime) !important;
+    border-radius: 50% !important;
+    opacity: 1 !important;
+    box-shadow: 0 0 5px rgba(204, 255, 0, 0.65) !important;
 }*/
 
-/* ========================
-   SLIDER
-======================== */
-.rc-slider-handle {
-    background-color: #bddd3d !important;
-    border-color: #bddd3d !important;
-}
-.rc-slider-track,
-.rc-slider .rc-slider-rail {
-    background-color: #beb6b658 !important;
-}
+.rc-slider .rc-slider-dot-active,
 .rc-slider-dot-active {
-    border-color: #bddd3d !important;
+    background: var(--lime-hover) !important;
+    background-color: var(--lime-hover) !important;
+    border-color: #ffffff !important;
 }
 
-/* ========================================
-   ESTILOS ESPECÍFICOS PÁGINA FORMULÁRIOS
-   ======================================== */
+.rc-slider .rc-slider-mark-text,
+.rc-slider-mark-text {
+    color: #e9ffc0 !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    white-space: nowrap !important;
+}
 
-/* Remove margem branca dos gráficos na página formulários */
+.rc-slider .rc-slider-mark-text-active,
+.rc-slider-mark-text-active {
+    color: var(--lime) !important;
+    font-weight: 700 !important;
+}
+
+/* Tooltip de versões antigas do rc-slider */
+.rc-slider-tooltip {
+    z-index: 9999 !important;
+}
+
+.rc-slider-tooltip-inner {
+    min-width: 52px !important;
+    height: auto !important;
+    padding: 5px 9px !important;
+    color: #ffffff !important;
+    background: var(--bg-control) !important;
+    border: 1px solid var(--lime) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    line-height: 18px !important;
+}
+
+.rc-slider-tooltip-arrow {
+    border-top-color: var(--bg-control) !important;
+}
+
+/* Tooltip de versões recentes que usam prefixo rc-slider-tooltip */
+[class^="rc-slider-tooltip"],
+[class*=" rc-slider-tooltip"] {
+    z-index: 9999 !important;
+}
+
+/* =========================================================
+   MAPAS, GRÁFICOS E MODEBAR
+
+   As cores principais dos hoverlabels do Plotly devem ser
+   definidas nos callbacks Python via layout.hoverlabel.
+   Este CSS apenas impede fundos HTML indesejados no contêiner.
+   ========================================================= */
+
+#mapa-densidade,
+#mapa-distribuicao {
+    background-color: #1f1f1f !important;
+    border-radius: 8px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 #mapa-densidade .js-plotly-plot,
-#mapa-distribuicao .js-plotly-plot {
-    background-color: transparent !important;
-}
-
-/* Remove fundo branco do container do Plotly */
+#mapa-distribuicao .js-plotly-plot,
 #mapa-densidade .plot-container,
-#mapa-distribuicao .plot-container {
-    background-color: transparent !important;
-}
-
-/* Remove margens e padding dos gráficos */
+#mapa-distribuicao .plot-container,
 #mapa-densidade .main-svg,
 #mapa-distribuicao .main-svg {
     background-color: transparent !important;
 }
 
-/* Container dos gráficos com fundo escuro */
-#mapa-densidade,
-#mapa-distribuicao {
-    background-color: #1f1f1f !important;
-    border-radius: 8px;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* Remove padding interno do dcc.Graph */
 #mapa-densidade > div,
 #mapa-distribuicao > div {
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
 }
 
-/* Estilização da Row que contém os mapas */
 .row.mb-4 {
     margin-bottom: 1rem !important;
 }
 
-/* Remove espaços entre colunas dos mapas */
 .row > .col-md-6 {
-    padding-left: 5px !important;
     padding-right: 5px !important;
+    padding-left: 5px !important;
 }
 
-/* Títulos dos mapas */
-#mapa-densidade h3,
-#mapa-distribuicao h3 {
-    color: white !important;
-    margin-bottom: 10px;
-    padding-left: 5px;
-}
-
-/* Container principal da página formulários */
 .container-fluid {
-    background-color: #222222 !important;
+    background-color: var(--bg-page) !important;
     padding: 10px !important;
 }
 
-/* Tooltip do Plotly com tema escuro */
-.hoverlayer .hovertext {
-    background-color: #2C3E50 !important;
-    border: 1px solid #375a7f !important;
-    color: white !important;
-}
-
-/* Remove fundo branco do modebar (barra de ferramentas do Plotly) */
 .modebar {
     background-color: transparent !important;
 }
@@ -295,18 +455,28 @@ textarea.form-control {
     background-color: rgba(55, 90, 127, 0.6) !important;
 }
 
-/* Legenda do mapa com fundo escuro */
 .colorbar {
     background-color: transparent !important;
 }
 
+/* =========================================================
+   SCROLLBAR DE TABELAS
+   ========================================================= */
 
-/* ========================
-   OUTROS AJUSTES
-======================== */
+.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar {
+    width: 8px;
+}
 
-/* Customização de Scrollbar apenas na dash-table */
-.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar { width: 8px; }
-.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar-track { background: rgba(44, 62, 80, 0.3); border-radius: 4px; }
-.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar-thumb { background: #375a7f; border-radius: 4px; }
-.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar-thumb:hover { background: #4a7bb8; }
+.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar-track {
+    background: rgba(44, 62, 80, 0.3);
+    border-radius: 4px;
+}
+
+.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar-thumb {
+    background: #375a7f;
+    border-radius: 4px;
+}
+
+.dash-table-container .dash-spreadsheet-container::-webkit-scrollbar-thumb:hover {
+    background: #4a7bb8;
+}

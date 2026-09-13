@@ -31,14 +31,27 @@ def register_ocorrencia_callbacks(app):
         # Filtra pelo ID do dropdown, se houver seleção
         if selected_id:
             dados = dados[dados['ID'] == selected_id]
-        
+
+        ##NOVO######################
+        #    hoverlabel_padrao = dict(
+        #        bgcolor='#1a1a1a',
+        #        bordercolor='#00d9ff',
+        #        font=dict(
+        #            family='Arial, sans-serif',
+        #            size=12,
+        #            color='#ffffff'
+        #        ),
+        #        align='left',
+        #        namelength=-1
+        #    )
+            ###########################
         # --- Mapa de densidade ---
-        fig_densidade = px.density_mapbox(
+        fig_densidade = px.density_map(
             dados,
             lat='Latitude',
             lon='Longitude',
             radius=3,
-            mapbox_style='carto-darkmatter',
+            map_style='carto-darkmatter',
             center=dict(lat=-24.845946, lon=-51.557551),
             zoom=6.3,
             opacity=0.85,
@@ -53,6 +66,12 @@ def register_ocorrencia_callbacks(app):
         fig_densidade.update_layout(
             coloraxis_showscale=True, 
             margin=dict(l=0, r=0, t=0, b=0), 
+            hoverlabel=dict(
+                bgcolor="rgba(0, 0, 0, 0)",
+                font_size=12,
+                font_family="Arial",
+                font_color="white"
+            ),
             coloraxis_colorbar=dict(
                 tickfont=dict(color='white'),
                 tickcolor='white',
@@ -60,35 +79,64 @@ def register_ocorrencia_callbacks(app):
             ),
         )
 
+        fig_densidade.update_traces(
+            hovertemplate ='<b>Municipio</b>: %{customdata[0]}<br>'
+            '<b>Ocorrencia</b>: %{customdata[1]}<br>'
+            '<b>Latitude</b>: %{lat:.4f}<br>'
+            '<b>Longitude</b>: %{lon:.4f}'
+            '<extra></extra>',
+            customdata=dados[['Municipio', 'Ocorrencia']].values
+        )
+
         # --- Mapa de distribuição ---
-        fig_distribuicao = px.scatter_mapbox(
+        fig_distribuicao = px.scatter_map(
             dados,
             lat="Latitude",
             lon="Longitude",
             hover_name="especie",
             zoom=6.3,
-            mapbox_style='carto-darkmatter'
+            map_style='carto-darkmatter'
         )
+
         fig_distribuicao.update_traces(
             marker=dict(
                 color='#CCFF00',
                 size=8,
-                opacity=0.4
+                opacity=0.55
             ),
-            hovertemplate='%{hovertext}'
-        )
+        #    hovertemplate='%{hovertext}'
+        #)
+            customdata=np.column_stack((
+            dados['Municipio'].fillna('Não informado'),
+            dados['ano_final'].fillna('Não informado'),
+            dados['Latitude'],
+            dados['Longitude']
+                )
+            ),
+            hovertemplate=(
+                '<b>%{hovertext}</b><br>'
+                '<br>'
+                '<b>Município:</b> %{customdata[0]}<br>'
+                '<b>Ano:</b> %{customdata[1]}<br>'
+                '<b>Latitude:</b> %{customdata[2]:.4f}<br>'
+                '<b>Longitude:</b> %{customdata[3]:.4f}'
+                '<extra></extra>'
+                )
+            )
+        
         fig_distribuicao.update_layout(
-            mapbox=dict(
+            map=dict(
                 center=dict(lat=-24.845946, lon=-51.557551),
                 zoom=6.3,
                 style='carto-darkmatter'
             ),
             margin=dict(l=0, r=0, t=0, b=0),
             hoverlabel=dict(
-                bgcolor="white",
+                bgcolor = "rgba(0, 0, 0, 0)",
+                #bgcolor="white",
                 font_size=12,
-                font_family="Arial",
-                font_color="black"
+                #font_family="Arial",
+                font_color="white"
             ),
             showlegend=False
         )

@@ -66,7 +66,7 @@ def create_footer():
                                 html.Br(),
                                 "Universidade Federal do Paraná - UFPR",
                                 html.Br(),
-                                html.A("ricaro.pires@ufpr.br", href="mailto:ricardo.pires@ufpr.br", 
+                                html.A("ricardopires@ufpr.br", href="mailto:ricardopires@ufpr.br", 
                                 style={'color': '#bddd3d', 'textDecoration': 'none'})
                             ], 
                                 style={'marginBottom': '15px'}

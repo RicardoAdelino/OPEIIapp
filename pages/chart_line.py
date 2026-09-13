@@ -43,10 +43,15 @@ def get_chart_layout():
                     min=1950,
                     max=2025,
                     step=1,
-                    value=1900,
+                    value=1950,
                     marks={ano: str(ano) for ano in range(1950,2026,4)},
+                    tooltip={"placement": "bottom", "always_visible": True},
+                    updatemode='mouseup',
+                    included=True
                 ),
-            ], style={'marginBottom': '32px'}),
+            ], 
+            style={'marginBottom': '32px'}),
+
             # NOVO: Dropdown para seleção de ID
             html.Div([    
                 html.H5(
@@ -95,12 +100,8 @@ def _create_chart_header():
                 ),
                 dcc.Markdown([
                     """
-                    Inspecione as tendencias de crescimento do número de registros 
-                    em função do `ano` e das múltiplas `formas de vida` das espécies exóticas registradas. 
-                    Nossa abordagem permite a `contextualização` dos dados a partir de alguns 
-                    marcadores históricos relevantes para entendimento da biologia da invasão. 
-                    Use o controle deslizante para explorar tendências históricas e utilize o 
-                    filtro para investigar espécies por categorias específicas.   
+                   Compreender a introdução e o estabelecimento de organismos fora de sua área nativa exige uma análise profunda de padrões espaciais e temporais. A partir desta plataforma, visualize de forma interativa os registros das espécies exóticas do Paraná para examinar o crescimento histórico dessas ocorrências. O sistema permite entender como essas espécies se comportam ao ocupar diferentes habitats e ao se diversificar em múltiplos grupos taxonômicos dentro do estado.O grande diferencial desta análise é a integração de marcadores históricos fundamentais, que fornecem o pano de fundo necessário para uma interpretação rica e contextualizada da biologia da invasão na região.Explore as ferramentas interativas logo abaixo. Manipule o controle deslizante para visualizar as grandes transformações ao longo das décadas e utilize o sistema de filtragem para isolar as variáveis e investigar detalhadamente as categorias de seu interesse científico.
+
                     """
                     ],
                 className="mb-4",

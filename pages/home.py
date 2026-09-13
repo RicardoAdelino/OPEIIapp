@@ -92,14 +92,14 @@ def _create_feature_cards():
             'title': 'Mapas Interativos',
             'description': 'Distribuição espacial e mapeamento territorial das espécies.',
             'button': 'Ver Mapas',
-            'href': '/mapas',
+            'href': '/modelos',
             'icon': ''#🗺️
         },
         {
             'title': 'Registro de Dados',
             'description': 'Formulários para cadastro e atualização de informações das espécies exóticas.',
             'button': 'Acessar Formulário',
-            'href': '/formulario',
+            'href': '/ocorrencia',
             'icon': ''#📝
         },
         {
